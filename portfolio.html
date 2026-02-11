@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — CodeCom</title>
+  <meta name="description" content="Explore CodeCom's portfolio of websites and UI designs. See our past work and get inspired for your next project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="CodeCom Logo" onerror="this.style.display='none'">
+        <span class="logo-text">Code<span>Com</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Products</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="founder.html">Founder</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="careers.html" class="nav-cta">Careers</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content reveal">
+        <span class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Our Work
+        </span>
+        <h1 class="hero-title">Websites & Designs We've Built</h1>
+        <p class="hero-description">
+          Explore our portfolio of completed websites, web applications, and UI designs. 
+          Each project represents our commitment to quality, creativity, and client satisfaction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILTER TABS ===== -->
+  <section class="section" style="padding-top: 60px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="websites">Websites</button>
+        <button class="filter-btn" data-filter="ui-designs">UI Designs</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO GRID ===== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="portfolio-grid">
+        
+        <!-- Portfolio Item 1 - RNAQ Food Bank System -->
+        <div class="portfolio-item reveal" data-category="websites">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/rnaq-foodbank-system.png" alt="RNAQ Foundation Food Bank System" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>RNAQ Foundation</h3>
+                <p>Food Bank Management System</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>RNAQ Foundation Food Bank System</h3>
+              <span class="portfolio-tag websites">Website</span>
+            </div>
+            <p>A comprehensive food bank management system for tracking beneficiaries, QR code passes, food distribution, and real-time analytics dashboard.</p>
+            <div class="portfolio-tech">
+              <span>Web App</span>
+              <span>Dashboard</span>
+              <span>QR System</span>
+              <span>React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item reveal" data-category="websites">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/ros-smart-developers.png" alt="ROS-SMART DEVELOPERS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>ROS-SMART DEVELOPERS</h3>
+                <p>Construction & Property Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>ROS-SMART DEVELOPERS</h3>
+              <span class="portfolio-tag websites">Website</span>
+            </div>
+            <p>Professional website for Ghana's trusted construction partner specializing in property development, sales, and construction services with modern design and clear CTAs.</p>
+            <div class="portfolio-tech">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive</span>
+              <span>Construction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item reveal" data-category="websites">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/priscan-farms.png" alt="Priscan Farms" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>Priscan Farms</h3>
+                <p>Poultry Farm E-Commerce</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>Priscan Farms</h3>
+              <span class="portfolio-tag websites">Website</span>
+            </div>
+            <p>Professional website for poultry farm business supplying farm-fresh eggs, layers, broilers, turkey, and guinea fowls with online ordering and delivery across Ghana.</p>
+            <div class="portfolio-tech">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>E-Commerce</span>
+              <span>Agriculture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 4 -->
+        <div class="portfolio-item reveal" data-category="websites">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/savannah-young-farmers.png" alt="Savannah Young Farmers Network" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>Savannah Young Farmers</h3>
+                <p>Agriculture Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>Savannah Young Farmers Network</h3>
+              <span class="portfolio-tag websites">Website</span>
+            </div>
+            <p>Agriculture development organization website focused on empowering farmers and enhancing food security in Africa through youth development in agriculture sector.</p>
+            <div class="portfolio-tech">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive</span>
+              <span>NGO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 5 -->
+        <div class="portfolio-item reveal" data-category="websites">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/el-shaddai-church.png" alt="El-Shaddai World Evangelism Ministries" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>El-Shaddai World Evangelism</h3>
+                <p>Church Website</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>El-Shaddai World Evangelism Ministries</h3>
+              <span class="portfolio-tag websites">Website</span>
+            </div>
+            <p>Professional church website featuring ministries, Bible studies, event calendar, and online giving platform for winning souls and teaching them to become like Christ.</p>
+            <div class="portfolio-tech">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>Event System</span>
+              <span>Church</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="portfolio-item reveal" data-category="ui-designs">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/project-6.jpg" alt="Banking App UI" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>Banking App</h3>
+                <p>Financial UI</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>Mobile Banking App UI</h3>
+              <span class="portfolio-tag ui-designs">UI Design</span>
+            </div>
+            <p>Secure and user-friendly mobile banking interface with transaction history and payment features.</p>
+            <div class="portfolio-tech">
+              <span>Figma</span>
+              <span>Finance</span>
+              <span>Security</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 7 - E-Voting System -->
+        <div class="portfolio-item reveal" data-category="ui-designs">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio/e-voting-system.png" alt="E-Voting System Identity Verification" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portfolio-placeholder" style="display: none;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 14l6-6"/><path d="M6 8l6 6"/></svg>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <h3>E-Voting System</h3>
+                <p>Identity Verification UI</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-header">
+              <h3>E-Voting System Mobile UI</h3>
+              <span class="portfolio-tag ui-designs">UI Design</span>
+            </div>
+            <p>Secure mobile interface for electronic voting system featuring identity verification through document capture and facial recognition for authenticated voting processes.</p>
+            <div class="portfolio-tech">
+              <span>Mobile UI</span>
+              <span>Identity Verification</span>
+              <span>Security</span>
+              <span>Voting</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="" alt="" id="lightboxImage">
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's build something amazing together. Get in touch to discuss your website or design needs.</p>
+        <div class="cta-actions">
+          <a href="careers.html" class="btn btn-primary">Get Started</a>
+          <a href="projects.html" class="btn btn-secondary">View Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="CodeCom" onerror="this.style.display='none'">
+            <span class="logo-text">Code<span>Com</span></span>
+          </div>
+          <p>Building digital futures with quality web design and development.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Products</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="founder.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="index.html#services">Web Development</a></li>
+            <li><a href="index.html#services">App Development</a></li>
+            <li><a href="index.html#services">UI/UX Design</a></li>
+            <li><a href="index.html#services">Cybersecurity</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="mailto:codecomteam25@gmail.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeCom. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

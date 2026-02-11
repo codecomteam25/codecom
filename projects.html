@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects — CodeCom</title>
+  <meta name="description" content="Explore CodeCom's portfolio of digital products including SmartSchool management system and SlideAI presentation generator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="CodeCom Logo" onerror="this.style.display='none'">
+        <span class="logo-text">Code<span>Com</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>        <a href="portfolio.html">Portfolio</a>        <a href="founder.html">Founder</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="careers.html" class="nav-cta">Join Us</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="breadcrumb reveal">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Projects</span>
+      </div>
+      <h1 class="reveal">Our Projects</h1>
+      <p class="reveal">Digital products we've built that are making a difference in the real world.</p>
+    </div>
+  </div>
+
+  <!-- ===== FEATURED PROJECTS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Featured Work</span>
+        <h2 class="section-title">Products We've Built</h2>
+        <p class="section-subtitle">From school management systems to AI-powered tools — here's what we're working on.</p>
+      </div>
+
+      <!-- SmartSchool -->
+      <div class="project-feature reveal" style="margin-top:60px;">
+        <div class="project-card" style="display:grid; grid-template-columns: 1fr 1fr; overflow:hidden;">
+          <div class="project-thumb" style="height:100%; min-height:360px; position:relative;">
+            <div style="text-align:center; padding:40px;">
+              <img src="assets/smartschool-logo.png" alt="SmartSchool Logo" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto 16px; display: block; border-radius: 24px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 16px; display:none;">
+                <rect width="80" height="80" rx="20" fill="rgba(0,212,255,0.08)" stroke="rgba(0,212,255,0.2)" stroke-width="1.5"/>
+                <path d="M24 28h32v4H24z" fill="#00d4ff" opacity="0.8"/>
+                <rect x="24" y="36" width="32" height="20" rx="3" stroke="#00d4ff" stroke-width="2" fill="none"/>
+                <line x1="24" y1="44" x2="56" y2="44" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+                <line x1="40" y1="36" x2="40" y2="56" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+                <circle cx="32" cy="40" r="2" fill="#00d4ff"/>
+                <circle cx="48" cy="40" r="2" fill="#00d4ff"/>
+                <path d="M28 50h8" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                <path d="M44 50h8" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+              <div style="font-family: var(--font-heading); font-size:2rem; font-weight:700; color: var(--white);">SmartSchool</div>
+              <div style="font-family: var(--font-mono); font-size:0.8rem; color: var(--accent); margin-top:8px;">Management System</div>
+            </div>
+            <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background: var(--accent);"></div>
+          </div>
+          <div class="project-info" style="padding:48px;">
+            <span class="project-tag">SaaS Platform</span>
+            <h3 style="font-size:1.8rem;">SmartSchool</h3>
+            <p style="font-size:1rem; line-height:1.9;">
+              A comprehensive school management system designed to digitize and streamline 
+              educational operations. SmartSchool handles everything from student enrollment 
+              and attendance tracking to grade management, fee processing, and parent communication.
+            </p>
+            <p style="color: var(--text-secondary); font-size:0.95rem; margin-top:16px; line-height:1.8;">
+              Built for schools that want to move beyond paper-based systems, SmartSchool provides 
+              an intuitive dashboard for administrators, teachers, students, and parents — all in 
+              one unified platform. Real-time reporting and analytics help school leaders make 
+              data-driven decisions.
+            </p>
+            <div class="project-tech" style="margin-top:24px;">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>REST API</span>
+              <span>Cloud Hosted</span>
+            </div>
+            <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+              <span class="btn btn-primary" style="cursor:default; background: #2ed573;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Live — Launched
+              </span>
+              <a href="https://smartschoolgh.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Visit Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SlideAI -->
+      <div class="project-feature reveal" style="margin-top:32px;">
+        <div class="project-card" style="display:grid; grid-template-columns: 1fr 1fr; overflow:hidden;">
+          <div class="project-info" style="padding:48px;">
+            <span class="project-tag">AI Tool</span>
+            <h3 style="font-size:1.8rem;">SlideAI</h3>
+            <p style="font-size:1rem; line-height:1.9;">
+              An AI-powered presentation generator that transforms your ideas into 
+              professional PowerPoint slides in seconds. Simply describe your topic, 
+              choose a style, and let SlideAI handle the rest.
+            </p>
+            <p style="color: var(--text-secondary); font-size:0.95rem; margin-top:16px; line-height:1.8;">
+              Whether you're a student preparing for a class presentation, a professional 
+              pitching to clients, or a teacher creating lecture materials — SlideAI removes 
+              the friction from slide creation. Powered by advanced language models, it generates 
+              structured content, suggests layouts, and delivers polished decks ready for presenting.
+            </p>
+            <div class="project-tech" style="margin-top:24px;">
+              <span>Python</span>
+              <span>OpenAI API</span>
+              <span>FastAPI</span>
+              <span>React</span>
+              <span>PPTX Generation</span>
+            </div>
+            <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+              <span class="btn btn-primary" style="cursor:default; background: #2ed573;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Live — Launched
+              </span>
+              <a href="https://slideai.site" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Visit Website
+              </a>
+            </div>
+          </div>
+          <div class="project-thumb" style="height:100%; min-height:360px; position:relative;">
+            <div style="text-align:center; padding:40px;">
+              <img src="assets/slideai-logo.png" alt="SlideAI Logo" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto 16px; display: block; border-radius: 24px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 16px; display:none;">
+                <rect width="80" height="80" rx="20" fill="rgba(0,212,255,0.08)" stroke="rgba(0,212,255,0.2)" stroke-width="1.5"/>
+                <rect x="20" y="22" width="40" height="30" rx="3" stroke="#00d4ff" stroke-width="2" fill="none"/>
+                <path d="M20 28h40" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+                <circle cx="25" cy="25" r="1.5" fill="#ff4757"/>
+                <circle cx="30" cy="25" r="1.5" fill="#ffa502"/>
+                <circle cx="35" cy="25" r="1.5" fill="#2ed573"/>
+                <path d="M28 36l4 4-4 4" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M38 44h10" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                <path d="M32 58l4-6h8l4 6" stroke="#00d4ff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="40" cy="55" r="6" stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <path d="M38 55l2 2 4-4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div style="font-family: var(--font-heading); font-size:2rem; font-weight:700; color: var(--white);">SlideAI</div>
+              <div style="font-family: var(--font-mono); font-size:0.8rem; color: var(--accent); margin-top:8px;">AI Presentation Generator</div>
+            </div>
+            <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background: var(--accent);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S NEXT ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Roadmap</span>
+        <h2 class="section-title">What's Coming Next</h2>
+        <p class="section-subtitle">We're always building. Here's a glimpse at what's on the horizon.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Cybersecurity Services</h3>
+          <p>Expanding into comprehensive cybersecurity offerings — vulnerability assessments, penetration testing, and security audits for businesses.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>More Mobile Apps</h3>
+          <p>Native mobile applications to complement our web platforms — bringing SmartSchool and SlideAI to iOS and Android.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3>AI Product Suite</h3>
+          <p>New AI-powered tools for automation, analytics, and content generation — expanding the SlideAI concept into a full product suite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Have a Project in Mind?</h2>
+        <p>Let's discuss how we can bring your idea to life with the right technology.</p>
+        <div class="cta-actions">
+          <a href="careers.html" class="btn btn-primary">Get in Touch</a>
+          <a href="founder.html" class="btn btn-secondary">Meet the Founder</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="CodeCom" onerror="this.style.display='none'">
+            <span class="logo-text">Code<span>Com</span></span>
+          </div>
+          <p>A software and app development agency building impactful digital solutions for businesses, nonprofits, and individuals worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">App Development</a></li>
+            <li><a href="#">Cybersecurity</a></li>
+            <li><a href="#">AI Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeCom. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <style>
+    @media (max-width: 768px) {
+      .project-card[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</body>
+</html>
