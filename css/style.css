@@ -1336,7 +1336,7 @@ button, a, input, select, textarea {
   overflow: hidden;
 }
 
-.founder-photo .initials {
+.founder-photo .founder-initials {
   font-family: var(--font-heading);
   font-size: 5rem;
   font-weight: 800;
@@ -2148,15 +2148,23 @@ button, a, input, select, textarea {
     grid-template-columns: 1fr;
   }
 
-  /* Founder Photo */
-  .founder-photo img,
-  .founder-photo .founder-initials {
-    width: 200px;
-    height: 200px;
+  /* Founder Page */
+  .page-founder .page-header {
+    padding: 120px 0 60px;
   }
 
-  .founder-initials {
-    font-size: 3rem;
+  .founder-section {
+    padding: 80px 0;
+  }
+
+  .founder-grid {
+    margin-top: 32px;
+    gap: 40px;
+  }
+
+  .founder-photo img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -2449,14 +2457,8 @@ button, a, input, select, textarea {
   }
 
   /* Founder Page */
-  .founder-photo img,
-  .founder-photo .founder-initials {
-    width: 160px;
-    height: 160px;
-  }
-
-  .founder-initials {
-    font-size: 2.5rem;
+  .page-founder .page-header {
+    padding: 110px 0 52px;
   }
 
   .about-content h2 {
