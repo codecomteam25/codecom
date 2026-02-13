@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const multiparty = require('multiparty');
 
 const getCareerApplicationTemplate = (data) => {
   return `
@@ -16,6 +17,7 @@ const getCareerApplicationTemplate = (data) => {
     .label { font-weight: 600; color: #0a0a0f; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; }
     .value { color: #333; font-size: 16px; }
     .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    .cv-note { background: #e8f4f8; padding: 12px; border-radius: 6px; color: #0a0a0f; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -48,6 +50,12 @@ const getCareerApplicationTemplate = (data) => {
         <div class="label">Experience Level</div>
         <div class="value">${data.experience || ''}</div>
       </div>
+      ${data.cvFileName ? `
+      <div class="field">
+        <div class="label">CV/Resume</div>
+        <div class="cv-note">📎 CV Attached: ${data.cvFileName}</div>
+      </div>
+      ` : ''}
       ${data.portfolio ? `
       <div class="field">
         <div class="label">Portfolio / LinkedIn</div>
@@ -75,12 +83,45 @@ const getCareerApplicationTemplate = (data) => {
   `.trim();
 };
 
-const getBody = (req) => {
-  if (req.body && typeof req.body === 'object') return req.body;
-  if (typeof req.body === 'string') {
-    try { return JSON.parse(req.body); } catch { return {}; }
-  }
-  return {};
+const parseMultipartForm = (req) => {
+  return new Promise((resolve, reject) => {
+    const form = new multiparty.Form();
+    const fields = {};
+    const files = [];
+
+    form.on('field', (name, value) => {
+      fields[name] = value;
+    });
+
+    form.on('part', (part) => {
+      if (part.filename) {
+        const chunks = [];
+        part.on('data', (chunk) => {
+          chunks.push(chunk);
+        });
+        part.on('end', () => {
+          files.push({
+            fieldname: part.name,
+            filename: part.filename,
+            content: Buffer.concat(chunks),
+            contentType: part.headers['content-type']
+          });
+        });
+      } else {
+        part.resume();
+      }
+    });
+
+    form.on('close', () => {
+      resolve({ fields, files });
+    });
+
+    form.on('error', (err) => {
+      reject(err);
+    });
+
+    form.parse(req);
+  });
 };
 
 module.exports = async (req, res) => {
@@ -97,9 +138,6 @@ module.exports = async (req, res) => {
     return res.status(405).json({ success: false, message: 'Method Not Allowed' });
   }
 
-  const body = getBody(req);
-  const { name, email, phone, location, position, experience, portfolio, motivation, additional } = body;
-
   if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
     return res.status(500).json({
       success: false,
@@ -107,11 +145,19 @@ module.exports = async (req, res) => {
     });
   }
 
-  if (!name || !email || !position || !motivation) {
-    return res.status(400).json({ success: false, message: 'Please fill in all required fields.' });
-  }
-
   try {
+    // Parse multipart form data
+    const { fields, files } = await parseMultipartForm(req);
+    
+    const { name, email, phone, location, position, experience, portfolio, motivation, additional } = fields;
+
+    if (!name || !email || !position || !motivation) {
+      return res.status(400).json({ success: false, message: 'Please fill in all required fields.' });
+    }
+
+    // Find CV file
+    const cvFile = files.find(f => f.fieldname === 'cv');
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -120,13 +166,27 @@ module.exports = async (req, res) => {
       }
     });
 
-    await transporter.sendMail({
+    const mailOptions = {
       from: `"CodeCom Careers" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       subject: `New Application: ${position} - ${name}`,
-      html: getCareerApplicationTemplate({ name, email, phone, location, position, experience, portfolio, motivation, additional }),
+      html: getCareerApplicationTemplate({ 
+        name, email, phone, location, position, experience, portfolio, motivation, additional,
+        cvFileName: cvFile ? cvFile.filename : null
+      }),
       replyTo: email
-    });
+    };
+
+    // Attach CV if present
+    if (cvFile) {
+      mailOptions.attachments = [{
+        filename: cvFile.filename,
+        content: cvFile.content,
+        contentType: cvFile.contentType
+      }];
+    }
+
+    await transporter.sendMail(mailOptions);
 
     return res.status(200).json({
       success: true,

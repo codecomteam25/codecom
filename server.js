@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
+const multiparty = require('multiparty');
 
 dotenv.config();
 
@@ -50,6 +51,7 @@ const getCareerApplicationTemplate = (data) => {
     .label { font-weight: 600; color: #0a0a0f; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; }
     .value { color: #333; font-size: 16px; }
     .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    .cv-note { background: #e8f4f8; padding: 12px; border-radius: 6px; color: #0a0a0f; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -60,28 +62,34 @@ const getCareerApplicationTemplate = (data) => {
     <div class="content">
       <div class="field">
         <div class="label">Applicant Name</div>
-        <div class="value">${data.name}</div>
+        <div class="value">${data.name || ''}</div>
       </div>
       <div class="field">
         <div class="label">Email Address</div>
-        <div class="value">${data.email}</div>
+        <div class="value">${data.email || ''}</div>
       </div>
       <div class="field">
         <div class="label">Phone Number</div>
-        <div class="value">${data.phone}</div>
+        <div class="value">${data.phone || ''}</div>
       </div>
       <div class="field">
         <div class="label">Location</div>
-        <div class="value">${data.location}</div>
+        <div class="value">${data.location || ''}</div>
       </div>
       <div class="field">
         <div class="label">Position Applied For</div>
-        <div class="value">${data.position}</div>
+        <div class="value">${data.position || ''}</div>
       </div>
       <div class="field">
         <div class="label">Experience Level</div>
-        <div class="value">${data.experience}</div>
+        <div class="value">${data.experience || ''}</div>
       </div>
+      ${data.cvFileName ? `
+      <div class="field">
+        <div class="label">CV/Resume</div>
+        <div class="cv-note">📎 CV Attached: ${data.cvFileName}</div>
+      </div>
+      ` : ''}
       ${data.portfolio ? `
       <div class="field">
         <div class="label">Portfolio / LinkedIn</div>
@@ -90,12 +98,12 @@ const getCareerApplicationTemplate = (data) => {
       ` : ''}
       <div class="field">
         <div class="label">Why CodeCom?</div>
-        <div class="value">${data.motivation.replace(/\n/g, '<br>')}</div>
+        <div class="value">${String(data.motivation || '').replace(/\n/g, '<br>')}</div>
       </div>
       ${data.additional ? `
       <div class="field">
         <div class="label">Additional Information</div>
-        <div class="value">${data.additional.replace(/\n/g, '<br>')}</div>
+        <div class="value">${String(data.additional || '').replace(/\n/g, '<br>')}</div>
       </div>
       ` : ''}
     </div>
@@ -107,6 +115,47 @@ const getCareerApplicationTemplate = (data) => {
 </body>
 </html>
   `.trim();
+};
+
+const parseMultipartForm = (req) => {
+  return new Promise((resolve, reject) => {
+    const form = new multiparty.Form();
+    const fields = {};
+    const files = [];
+
+    form.on('field', (name, value) => {
+      fields[name] = value;
+    });
+
+    form.on('part', (part) => {
+      if (part.filename) {
+        const chunks = [];
+        part.on('data', (chunk) => {
+          chunks.push(chunk);
+        });
+        part.on('end', () => {
+          files.push({
+            fieldname: part.name,
+            filename: part.filename,
+            content: Buffer.concat(chunks),
+            contentType: part.headers['content-type']
+          });
+        });
+      } else {
+        part.resume();
+      }
+    });
+
+    form.on('close', () => {
+      resolve({ fields, files });
+    });
+
+    form.on('error', (err) => {
+      reject(err);
+    });
+
+    form.parse(req);
+  });
 };
 
 const getFeedbackTemplate = (data) => {
@@ -173,23 +222,51 @@ const getFeedbackTemplate = (data) => {
 // API endpoint for career applications
 app.post('/api/submit-application', async (req, res) => {
   try {
-    const { name, email, phone, location, position, experience, portfolio, motivation, additional } = req.body;
+    const contentType = String(req.headers['content-type'] || '');
+    const isMultipart = contentType.includes('multipart/form-data');
+
+    const { fields, files } = isMultipart
+      ? await parseMultipartForm(req)
+      : { fields: req.body || {}, files: [] };
+
+    const { name, email, phone, location, position, experience, portfolio, motivation, additional } = fields;
 
     // Validation
-    if (!name || !email || !phone || !position || !motivation) {
+    if (!name || !email || !position || !motivation) {
       return res.status(400).json({ 
         success: false, 
         message: 'Please fill in all required fields.' 
       });
     }
 
+    const cvFile = Array.isArray(files) ? files.find((f) => f.fieldname === 'cv') : null;
+
     const mailOptions = {
       from: `"CodeCom Careers" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       subject: `New Application: ${position} - ${name}`,
-      html: getCareerApplicationTemplate(req.body),
+      html: getCareerApplicationTemplate({
+        name,
+        email,
+        phone,
+        location,
+        position,
+        experience,
+        portfolio,
+        motivation,
+        additional,
+        cvFileName: cvFile ? cvFile.filename : null
+      }),
       replyTo: email
     };
+
+    if (cvFile) {
+      mailOptions.attachments = [{
+        filename: cvFile.filename,
+        content: cvFile.content,
+        contentType: cvFile.contentType
+      }];
+    }
 
     await transporter.sendMail(mailOptions);
 
@@ -250,7 +327,16 @@ app.get('/', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`🚀 CodeCom server running on http://localhost:${PORT}`);
   console.log(`📧 Email configured for: ${process.env.GMAIL_USER}`);
+});
+
+server.on('error', (err) => {
+  if (err && err.code === 'EADDRINUSE') {
+    console.error(`❌ Port ${PORT} is already in use. Close the other server or set PORT to a different value.`);
+    process.exit(1);
+  }
+  console.error('❌ Server error:', err);
+  process.exit(1);
 });

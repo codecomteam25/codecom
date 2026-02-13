@@ -108,11 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Collect form data
       const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-
+      
       // Determine endpoint based on form ID
       const isApplication = form.id === 'applicationForm';
       const isFeedback = form.id === 'feedbackForm';
@@ -137,14 +133,26 @@ document.addEventListener('DOMContentLoaded', () => {
       button.style.opacity = '0.7';
 
       try {
-        const response = await fetch(fullUrl, {
+        // For application form with file upload, send FormData
+        // For feedback form, send JSON
+        const requestOptions = {
           method: 'POST',
-          headers: { 
+          body: isApplication ? formData : JSON.stringify(Object.fromEntries(formData))
+        };
+        
+        // Only add Content-Type header for non-file forms
+        if (!isApplication) {
+          requestOptions.headers = { 
             'Content-Type': 'application/json',
             'Accept': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
+          };
+        } else {
+          requestOptions.headers = { 
+            'Accept': 'application/json'
+          };
+        }
+
+        const response = await fetch(fullUrl, requestOptions);
 
         // Check if response is ok and has content
         if (!response.ok) {
