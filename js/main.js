@@ -76,6 +76,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== OPTIONAL FIELD TOGGLES =====
+  const optionalFieldToggles = document.querySelectorAll('[data-optional-toggle]');
+
+  optionalFieldToggles.forEach(toggle => {
+    const group = toggle.closest('.form-group');
+    if (!group) return;
+
+    const body = group.querySelector('.optional-field-body');
+    const input = group.querySelector('input, textarea, select');
+    if (!body || !input) return;
+
+    const setOffState = (isOff) => {
+      body.hidden = isOff;
+      input.disabled = isOff;
+      if (isOff) input.value = '';
+
+      toggle.setAttribute('aria-pressed', isOff ? 'true' : 'false');
+      toggle.textContent = isOff ? 'I have one' : "I don't have one";
+    };
+
+    // Default: field hidden and disabled
+    setOffState(true);
+
+    toggle.addEventListener('click', () => {
+      setOffState(!body.hidden);
+    });
+  });
+
   // ===== FORM HANDLING — Send directly via Backend with Gmail =====
   const forms = document.querySelectorAll('form');
   
