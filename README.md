@@ -136,10 +136,8 @@ codecom/
 
 ## Career Roles Available
 
-1. **Cybersecurity Analyst** — Remote
-2. **Product Sales Representative — SmartSchool** — Onsite
-3. **Product Sales Representative — SlideAI** — Onsite
-4. **Cold Calling Specialist** — Remote
+1. **Lead Generation Specialist** — Remote
+2. **Product Sales Representative — SmartSchool** — Filled (Check back later)
 
 ## Projects Featured
 
