@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(form);
       
       // Determine endpoint based on form ID
-      const isApplication = form.id === 'applicationForm';
+      const isApplication = form.id === 'applicationForm' || form.id === 'volunteerForm';
       const isFeedback = form.id === 'feedbackForm';
       const endpoint = isApplication 
         ? '/api/submit-application' 
