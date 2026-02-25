@@ -28,8 +28,21 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a> <a href="portfolio.html">Portfolio</a> <a
-          href="founder.html">Founder</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            About
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="founder.html">Founder</a>
+            <a href="team.html">Team</a>
+          </div>
+        </div>
         <a href="feedback.html">Feedback</a>
         <a href="volunteers.html">Volunteer</a>
         <a href="careers.html" class="nav-cta">Join Us</a>
@@ -111,8 +124,6 @@
             <div class="project-tech" style="margin-top:24px;">
               <span>React</span>
               <span>Node.js</span>
-              <span>PostgreSQL</span>
-              <span>REST API</span>
               <span>Cloud Hosted</span>
             </div>
             <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
@@ -214,11 +225,79 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== WHAT'S NEXT ===== -->
-  <section class="section" style="background: var(--bg-secondary);">
+      <!-- CampusMart -->
+      <div class="project-feature reveal" style="margin-top:32px;">
+        <div class="project-card" style="display:grid; grid-template-columns: 1fr 1fr; overflow:hidden;">
+          <div class="project-thumb" style="height:100%; min-height:360px; position:relative;">
+            <div style="text-align:center; padding:40px;">
+              <img src="/assets/campusmart-logo.png" alt="CampusMart Logo"
+                style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto 16px; display: block; border-radius: 24px;"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                style="margin:0 auto 16px; display:none;">
+                <rect width="80" height="80" rx="20" fill="rgba(0,212,255,0.08)" stroke="rgba(0,212,255,0.2)"
+                  stroke-width="1.5" />
+                <circle cx="28" cy="60" r="4" stroke="#00d4ff" stroke-width="2" fill="none" />
+                <circle cx="56" cy="60" r="4" stroke="#00d4ff" stroke-width="2" fill="none" />
+                <path d="M20 20h8l6 24h24l6-16H28" stroke="#00d4ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="34" y="48" width="20" height="8" rx="2" stroke="#00d4ff" stroke-width="2" fill="none" />
+              </svg>
+              <div style="font-family: var(--font-heading); font-size:2rem; font-weight:700; color: var(--white);">
+                CampusMart</div>
+              <div style="font-family: var(--font-mono); font-size:0.8rem; color: var(--accent); margin-top:8px;">
+                Campus Marketplace</div>
+            </div>
+            <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background: var(--accent);"></div>
+          </div>
+          <div class="project-info" style="padding:48px;">
+            <span class="project-tag">Marketplace Platform</span>
+            <h3 style="font-size:1.8rem;">CampusMart</h3>
+            <p style="font-size:1rem; line-height:1.9;">
+              A university-focused marketplace where students can buy, sell, and book services within their campus community. 
+              Students can sell textbooks, electronics, and other items, or offer services like tutoring, delivery, and design.
+            </p>
+            <p style="color: var(--text-secondary); font-size:0.95rem; margin-top:16px; line-height:1.8;">
+              The platform uses online payment systems for secure payments and a unique confirmation code system to ensure safe transactions. 
+              Built specifically for campus life, it connects students at the same university while providing sellers with tools to manage 
+              listings, track earnings, and grow their business.
+            </p>
+            <div class="project-tech" style="margin-top:24px;">
+              <span>React Native</span>
+              <span>Node.js</span>
+              <span>Paystack</span>
+              <span>Marketplace</span>
+            </div>
+            <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+              <span class="btn btn-primary" style="cursor:default; background: #2ed573;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Live — Launched
+              </span>
+              <a href="https://campusmartgh.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                Visit Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== WHAT'S NEXT ===== -->
+      <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="reveal">
+            <span class="section-label">Roadmap</span>
+            <h2 class="section-title">What's Coming Next</h2>
+            <p class="section-subtitle">We're always building. Here's a glimpse at what's on the horizon.</p>
     <div class="container">
       <div class="reveal">
         <span class="section-label">Roadmap</span>

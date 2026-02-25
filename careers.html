@@ -28,7 +28,21 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a> <a href="portfolio.html">Portfolio</a> <a href="founder.html">Founder</a>
+        <a href="projects.html">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            About
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="founder.html">Founder</a>
+            <a href="team.html">Team</a>
+          </div>
+        </div>
         <a href="feedback.html">Feedback</a>
         <a href="volunteers.html">Volunteer</a>
         <a href="careers.html" class="nav-cta active">Join Us</a>
@@ -116,7 +130,7 @@
         </p>
       </div>
       <div class="positions-grid">
-        <div class="position-card reveal reveal-delay-1">
+        <div class="position-card reveal reveal-delay-1" style="opacity: 0.7;">
           <div class="position-left">
             <div class="pos-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -128,11 +142,16 @@
               </svg>
             </div>
             <div>
-              <h3>Lead Generation Specialist</h3>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+                <h3 style="margin: 0;">Lead Generation Specialist</h3>
+                <span
+                  style="background: var(--accent-color); color: var(--bg-primary); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Filled</span>
+              </div>
               <p class="pos-desc">Help us expand our reach by identifying and qualifying potential leads for our suite
                 of software products. You will be responsible for researching target markets, finding key
                 decision-makers, and building a pipeline of prospects for our sales team. Ideal for proactive
                 individuals with strong research and communication skills.</p>
+              <p class="pos-desc" style="margin-top: 1rem; color: var(--accent-color); font-weight: 600;">⚠️ This position has been filled. Thank you for your interest!</p>
               <div class="pos-tags">
                 <span>Lead Generation</span>
                 <span>Remote</span>
@@ -141,7 +160,7 @@
               </div>
             </div>
           </div>
-          <a href="#apply" class="btn btn-outline">Apply Now</a>
+          <button class="btn btn-outline" disabled style="cursor: not-allowed; opacity: 0.5;">Position Filled</button>
         </div>
 
         <div class="position-card reveal reveal-delay-2" style="opacity: 0.7;">

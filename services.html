@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Help Your Business Grow — CodeCom</title>
+  <meta name="description"
+    content="Discover how CodeCom helps businesses grow through web development. From sales automation to scalable infrastructure, we turn websites into business assets.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="page-services">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/assets/logo.png" alt="CodeCom Logo" onerror="this.style.display='none'">
+        <span class="logo-text">Code<span>Com</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html" class="active">Services</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            About
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="founder.html">Founder</a>
+            <a href="team.html">Team</a>
+          </div>
+        </div>
+        <a href="feedback.html">Feedback</a>
+        <a href="volunteers.html">Volunteer</a>
+        <a href="careers.html" class="nav-cta">Join Us</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="breadcrumb reveal">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Services</span>
+      </div>
+      <h1 class="reveal">How We Help Your Business Grow</h1>
+      <p class="reveal">We don't just build websites — we build digital systems that help businesses attract customers, convert visitors into paying clients, and scale their revenue.</p>
+      <div class="reveal reveal-delay-1" style="margin-top: 20px;">
+        <button onclick="downloadPDF()" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Service Guide (PDF)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INTRO SECTION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">What I Bring Into Your Business</h2>
+      </div>
+      
+      <!-- Service 1 -->
+      <div class="services-detail-grid reveal reveal-delay-1">
+        <div class="service-detail-number">01</div>
+        <div class="service-detail-content">
+          <h3>A Sales Machine That Works 24/7</h3>
+          <p class="service-lead">Your website should not just exist — it should sell.</p>
+          <p>I build structured, high-performance websites that:</p>
+          <ul class="service-list">
+            <li>Capture leads automatically</li>
+            <li>Guide visitors toward clear actions</li>
+            <li>Integrate payment systems</li>
+            <li>Convert traffic into revenue</li>
+          </ul>
+          <p class="service-highlight">Even when you're asleep, your website should be generating inquiries and sales.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="services-detail-grid reveal reveal-delay-2">
+        <div class="service-detail-number">02</div>
+        <div class="service-detail-content">
+          <h3>Credibility & Brand Authority</h3>
+          <p class="service-lead">In today's market, people judge businesses online before they ever make contact.</p>
+          <p>I help you:</p>
+          <ul class="service-list">
+            <li>Establish a strong digital presence</li>
+            <li>Present your services clearly and professionally</li>
+            <li>Build trust through structure, clarity, and functionality</li>
+          </ul>
+          <p class="service-highlight">A professional website increases perceived value — and higher perceived value allows you to charge more.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="services-detail-grid reveal reveal-delay-3">
+        <div class="service-detail-number">03</div>
+        <div class="service-detail-content">
+          <h3>Automation That Saves Time & Reduces Costs</h3>
+          <p class="service-lead">Manual processes slow businesses down.</p>
+          <p>Through web systems, I can help you:</p>
+          <ul class="service-list">
+            <li>Automate bookings</li>
+            <li>Manage customers through dashboards</li>
+            <li>Track orders</li>
+            <li>Accept online payments</li>
+            <li>Collect and store data securely</li>
+          </ul>
+          <p class="service-highlight">This reduces staff workload and increases efficiency.</p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="services-detail-grid reveal reveal-delay-1">
+        <div class="service-detail-number">04</div>
+        <div class="service-detail-content">
+          <h3>Data-Driven Growth</h3>
+          <p class="service-lead">I integrate analytics and tracking tools so you can:</p>
+          <ul class="service-list">
+            <li>See where your customers come from</li>
+            <li>Understand what services sell most</li>
+            <li>Identify drop-off points in your sales funnel</li>
+          </ul>
+          <p class="service-highlight">Better data = smarter decisions = higher revenue.</p>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="services-detail-grid reveal reveal-delay-2">
+        <div class="service-detail-number">05</div>
+        <div class="service-detail-content">
+          <h3>Scalable Digital Infrastructure</h3>
+          <p class="service-lead">If your business grows, your system should grow with it.</p>
+          <p>I build:</p>
+          <ul class="service-list">
+            <li>Structured backend systems</li>
+            <li>Secure databases</li>
+            <li>Performance-optimized platforms</li>
+            <li>Scalable hosting setups</li>
+          </ul>
+          <p class="service-highlight">So you're not rebuilding from scratch every year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS SECTION ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" style="text-align: center;">What This Means for Your Business</h2>
+      </div>
+      <div class="results-grid reveal reveal-delay-1">
+        <div class="result-card">
+          <div class="result-icon">✓</div>
+          <h4>More Visibility</h4>
+          <p>Stand out in your market with a professional digital presence</p>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">✓</div>
+          <h4>More Leads</h4>
+          <p>Capture and nurture potential customers automatically</p>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">✓</div>
+          <h4>More Conversions</h4>
+          <p>Turn visitors into paying clients with optimized user journeys</p>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">✓</div>
+          <h4>More Automation</h4>
+          <p>Free up time by automating repetitive business processes</p>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">✓</div>
+          <h4>Higher Revenue</h4>
+          <p>Increase earnings through better systems and processes</p>
+        </div>
+        <div class="result-card">
+          <div class="result-icon">✓</div>
+          <h4>Scalable Growth</h4>
+          <p>Build infrastructure that grows with your business</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION STATEMENT ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="mission-box reveal">
+        <h2>My Goal Is Simple</h2>
+        <p class="mission-statement">To turn your website into a business asset — not an expense.</p>
+        <div class="mission-signature">— Stanley Yamoah, Founder</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Website Development Pricing</h2>
+        <p class="section-subtitle">Transparent pricing for businesses in Ghana. All packages include deployment assistance and revisions.</p>
+      </div>
+
+      <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 60px;">
+        
+        <!-- Basic Package -->
+        <div class="pricing-card reveal reveal-delay-1" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; position: relative; transition: var(--transition);">
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">Basic Package</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Best for: Small businesses, churches, personal brands</p>
+          </div>
+          <div style="margin-bottom: 32px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent);">GHS 2,500 <span style="font-size: 1.2rem; color: var(--text-secondary); font-weight: 400;">– 3,500</span></div>
+          </div>
+          <div style="margin-bottom: 24px;">
+            <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; color: var(--white);">Includes:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>1–5 page responsive website</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Production-ready build (React / Next.js / WordPress etc.)</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Contact form</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Social media integration</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Basic SEO setup</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>2 rounds of revisions</span>
+              </li>
+            </ul>
+          </div>
+          <div style="padding-top: 16px; border-top: 1px solid var(--border);">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px;"><strong>Delivery:</strong> 1–2 weeks</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);"><strong>Domain & Hosting:</strong> Paid by client (approx. GHS 150–250/year domain, GHS 500–1,200/year hosting)</p>
+          </div>
+        </div>
+
+        <!-- Standard Package -->
+        <div class="pricing-card reveal reveal-delay-2" style="background: var(--bg-card); border: 2px solid var(--accent); border-radius: var(--radius-lg); padding: 40px; position: relative; transition: var(--transition); box-shadow: 0 0 40px rgba(0,212,255,0.15);">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--bg-primary); padding: 4px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">POPULAR</div>
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">Standard Package</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Best for: Growing businesses</p>
+          </div>
+          <div style="margin-bottom: 32px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent);">GHS 6,000 <span style="font-size: 1.2rem; color: var(--text-secondary); font-weight: 400;">– 10,000</span></div>
+          </div>
+          <div style="margin-bottom: 24px;">
+            <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; color: var(--white);">Everything in Basic plus:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Up to 10 pages</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>CMS setup (client can edit content)</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Blog setup (if needed)</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Payment integration</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Analytics integration</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Performance optimization</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>3 rounds of revisions</span>
+              </li>
+            </ul>
+          </div>
+          <div style="padding-top: 16px; border-top: 1px solid var(--border);">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px;"><strong>Delivery:</strong> 3–4 weeks</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);"><strong>Domain & Hosting:</strong> Paid by client (may require VPS depending on features)</p>
+          </div>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="pricing-card reveal reveal-delay-3" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; position: relative; transition: var(--transition);">
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">Premium Package</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Best for: Platforms, startups, web applications</p>
+          </div>
+          <div style="margin-bottom: 32px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent);">GHS 15,000 <span style="font-size: 1.2rem; color: var(--text-secondary); font-weight: 400;">– 35,000+</span></div>
+          </div>
+          <div style="margin-bottom: 24px;">
+            <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; color: var(--white);">Everything in Standard plus:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Custom web application</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>User authentication</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Admin dashboard</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Database architecture</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>API integrations</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>Role-based systems</span>
+              </li>
+              <li style="padding: 8px 0; color: var(--text-secondary); font-size: 0.9rem; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent); margin-top: 2px;">✓</span>
+                <span>30 days post-launch support</span>
+              </li>
+            </ul>
+          </div>
+          <div style="padding-top: 16px; border-top: 1px solid var(--border);">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px;"><strong>Delivery:</strong> 4–8 weeks</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);"><strong>Domain & Hosting:</strong> Paid by client (VPS/Cloud hosting required, approx. GHS 1,500–5,000+/year)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Info -->
+      <div class="reveal" style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--white);">Maintenance Plan (Optional)</h3>
+          <p style="font-size: 1.5rem; font-weight: 700; color: var(--accent); margin-bottom: 16px;">GHS 500 – 1,500/month</p>
+          <p style="color: var(--text-secondary); margin-bottom: 16px;">Includes: Updates, Backups, Security monitoring, Minor changes (limited hours)</p>
+          
+          <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
+            <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: var(--white);">Terms & Conditions</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 0.9rem;">
+              <li style="padding: 6px 0; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent);">•</span>
+                <span>60–70% upfront payment required before project commencement</span>
+              </li>
+              <li style="padding: 6px 0; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent);">•</span>
+                <span>Remaining balance due before final deployment</span>
+              </li>
+              <li style="padding: 6px 0; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent);">•</span>
+                <span>Domain and hosting are paid by the client</span>
+              </li>
+              <li style="padding: 6px 0; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent);">•</span>
+                <span>Project timeline depends on timely content delivery from client</span>
+              </li>
+              <li style="padding: 6px 0; display: flex; align-items: start; gap: 8px;">
+                <span style="color: var(--accent);">•</span>
+                <span>Additional features outside agreed scope require a separate quote</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Let's build a digital system that drives real results for your business.</p>
+        <div class="cta-actions">
+          <a href="careers.html" class="btn btn-primary">Get Started</a>
+          <a href="projects.html" class="btn btn-secondary">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="/assets/logo.png" alt="CodeCom" onerror="this.style.display='none'">
+            <span class="logo-text">Code<span>Com</span></span>
+          </div>
+          <p>A software and app development agency building impactful digital solutions for businesses, nonprofits, and
+            individuals worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="#">App Development</a></li>
+            <li><a href="#">Cybersecurity</a></li>
+            <li><a href="#">AI Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeCom. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@stanleybuilds?_r=1&_t=ZS-93psNXuraSt" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/codecom25?igsh=bjZ2YndmYTc5dXJl&utm_source=qr" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/stanley-yamoah-1931b2208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    function downloadPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      const margin = 20;
+      const maxWidth = pageWidth - (margin * 2);
+      let yPosition = 25;
+
+      // Header with accent line
+      doc.setDrawColor(0, 212, 255);
+      doc.setLineWidth(0.5);
+      doc.line(margin, 15, pageWidth - margin, 15);
+
+      // Title
+      doc.setFontSize(18);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      const titleLines = doc.splitTextToSize('How I Help Businesses Grow Through Web Development', maxWidth);
+      doc.text(titleLines, margin, yPosition);
+      yPosition += titleLines.length * 7 + 5;
+
+      // Subtitle/Brand
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(0, 212, 255);
+      doc.text('CodeCom — Web Development Services', margin, yPosition);
+      yPosition += 12;
+
+      // Introduction
+      doc.setFontSize(10);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(60, 60, 60);
+      const intro = doc.splitTextToSize('As a web developer, I don\'t just build websites — I build digital systems that help businesses attract customers, convert visitors into paying clients, and scale their revenue.', maxWidth);
+      doc.text(intro, margin, yPosition);
+      yPosition += intro.length * 5 + 12;
+
+      const sections = [
+        {
+          title: '1. A Sales Machine That Works 24/7',
+          content: 'Your website should not just exist — it should sell.\n\nI build structured, high-performance websites that:\n  • Capture leads automatically\n  • Guide visitors toward clear actions\n  • Integrate payment systems\n  • Convert traffic into revenue\n\nEven when you\'re asleep, your website should be generating inquiries and sales.'
+        },
+        {
+          title: '2. Credibility & Brand Authority',
+          content: 'In today\'s market, people judge businesses online before they ever make contact.\n\nI help you:\n  • Establish a strong digital presence\n  • Present your services clearly and professionally\n  • Build trust through structure, clarity, and functionality\n\nA professional website increases perceived value — and higher perceived value allows you to charge more.'
+        },
+        {
+          title: '3. Automation That Saves Time & Reduces Costs',
+          content: 'Manual processes slow businesses down.\n\nThrough web systems, I can help you:\n  • Automate bookings\n  • Manage customers through dashboards\n  • Track orders\n  • Accept online payments\n  • Collect and store data securely\n\nThis reduces staff workload and increases efficiency.'
+        },
+        {
+          title: '4. Data-Driven Growth',
+          content: 'I integrate analytics and tracking tools so you can:\n  • See where your customers come from\n  • Understand what services sell most\n  • Identify drop-off points in your sales funnel\n\nBetter data = smarter decisions = higher revenue.'
+        },
+        {
+          title: '5. Scalable Digital Infrastructure',
+          content: 'If your business grows, your system should grow with it.\n\nI build:\n  • Structured backend systems\n  • Secure databases\n  • Performance-optimized platforms\n  • Scalable hosting setups\n\nSo you\'re not rebuilding from scratch every year.'
+        }
+      ];
+
+      sections.forEach((section, index) => {
+        if (yPosition > pageHeight - 50) {
+          doc.addPage();
+          yPosition = 25;
+        }
+
+        // Section title
+        doc.setFontSize(12);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(0, 0, 0);
+        doc.text(section.title, margin, yPosition);
+        yPosition += 7;
+
+        // Section content
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'normal');
+        doc.setTextColor(60, 60, 60);
+        const lines = doc.splitTextToSize(section.content, maxWidth);
+        doc.text(lines, margin, yPosition);
+        yPosition += lines.length * 5 + 12;
+      });
+
+      // Check if we need a new page for the conclusion
+      if (yPosition > pageHeight - 70) {
+        doc.addPage();
+        yPosition = 25;
+      }
+
+      // Divider line
+      doc.setDrawColor(200, 200, 200);
+      doc.setLineWidth(0.3);
+      doc.line(margin, yPosition, pageWidth - margin, yPosition);
+      yPosition += 10;
+
+      // What This Means section
+      doc.setFontSize(13);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('What This Means for Your Business', margin, yPosition);
+      yPosition += 9;
+
+      doc.setFontSize(10);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(60, 60, 60);
+      const benefits = [
+        '✓  More visibility',
+        '✓  More leads',
+        '✓  More conversions',
+        '✓  More automation',
+        '✓  Higher revenue potential'
+      ];
+      benefits.forEach(benefit => {
+        doc.text(benefit, margin + 5, yPosition);
+        yPosition += 6;
+      });
+      yPosition += 10;
+
+      // Goal statement
+      doc.setFontSize(11);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      const goal = doc.splitTextToSize('My goal is simple: To turn your website into a business asset — not an expense.', maxWidth);
+      doc.text(goal, margin, yPosition);
+      yPosition += goal.length * 6 + 8;
+
+      // Signature
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'italic');
+      doc.setTextColor(100, 100, 100);
+      doc.text('— Stanley Yamoah, Founder of CodeCom', margin, yPosition);
+      yPosition += 15;
+
+      // New page for pricing
+      doc.addPage();
+      yPosition = 25;
+
+      // Pricing header
+      doc.setDrawColor(0, 212, 255);
+      doc.setLineWidth(0.5);
+      doc.line(margin, 15, pageWidth - margin, 15);
+
+      doc.setFontSize(16);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('Website Development Pricing', margin, yPosition);
+      yPosition += 12;
+
+      // GHANA PRICING
+      doc.setFontSize(14);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 212, 255);
+      doc.text('GHANA PRICING (GHS)', margin, yPosition);
+      yPosition += 10;
+
+      // Basic Package
+      doc.setFontSize(12);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('Basic Package — GHS 2,500 – 3,500', margin, yPosition);
+      yPosition += 6;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'italic');
+      doc.setTextColor(60, 60, 60);
+      doc.text('Best for: Small businesses, churches, personal brands', margin, yPosition);
+      yPosition += 7;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'normal');
+      const basicFeatures = '• 1–5 page responsive website\n• Production-ready build\n• Contact form & social media integration\n• Basic SEO setup\n• 2 rounds of revisions\n• Delivery: 1–2 weeks\n• Domain & Hosting: Paid by client (GHS 150–250/year domain, GHS 500–1,200/year hosting)';
+      const basicLines = doc.splitTextToSize(basicFeatures, maxWidth);
+      doc.text(basicLines, margin + 3, yPosition);
+      yPosition += basicLines.length * 4.5 + 8;
+
+      // Standard Package
+      doc.setFontSize(12);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('Standard Package — GHS 6,000 – 10,000', margin, yPosition);
+      yPosition += 6;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'italic');
+      doc.setTextColor(60, 60, 60);
+      doc.text('Best for: Growing businesses', margin, yPosition);
+      yPosition += 7;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'normal');
+      const standardFeatures = 'Everything in Basic plus:\n• Up to 10 pages\n• CMS setup (client can edit content)\n• Blog setup (if needed)\n• Payment integration\n• Analytics integration\n• Performance optimization\n• 3 rounds of revisions\n• Delivery: 3–4 weeks';
+      const standardLines = doc.splitTextToSize(standardFeatures, maxWidth);
+      doc.text(standardLines, margin + 3, yPosition);
+      yPosition += standardLines.length * 4.5 + 8;
+
+      // Premium Package
+      doc.setFontSize(12);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('Premium Package — GHS 15,000 – 35,000+', margin, yPosition);
+      yPosition += 6;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'italic');
+      doc.setTextColor(60, 60, 60);
+      doc.text('Best for: Platforms, startups, web applications', margin, yPosition);
+      yPosition += 7;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'normal');
+      const premiumFeatures = 'Everything in Standard plus:\n• Custom web application\n• User authentication & admin dashboard\n• Database architecture\n• API integrations\n• Role-based systems\n• 30 days post-launch support\n• Delivery: 4–8 weeks\n• VPS/Cloud hosting required (GHS 1,500–5,000+/year)';
+      const premiumLines = doc.splitTextToSize(premiumFeatures, maxWidth);
+      doc.text(premiumLines, margin + 3, yPosition);
+      yPosition += premiumLines.length * 4.5 + 10;
+
+      // Check if we need new page for USD pricing
+      if (yPosition > pageHeight - 80) {
+        doc.addPage();
+        yPosition = 25;
+      }
+
+      // USD PRICING
+      doc.setFontSize(14);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 212, 255);
+      doc.text('INTERNATIONAL PRICING (USD)', margin, yPosition);
+      yPosition += 10;
+
+      doc.setFontSize(10);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(60, 60, 60);
+      const usdPricing = [
+        'Basic — $500 – $800',
+        'Standard — $1,200 – $2,500',
+        'Premium — $3,000 – $7,000+',
+        '',
+        'Large-scale SaaS or marketplace systems: $8,000 – $15,000+'
+      ];
+      usdPricing.forEach(line => {
+        doc.text(line, margin + 3, yPosition);
+        yPosition += 6;
+      });
+      yPosition += 8;
+
+      // Maintenance Plan
+      doc.setFontSize(12);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('Maintenance Plan (Optional)', margin, yPosition);
+      yPosition += 7;
+      doc.setFontSize(10);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(60, 60, 60);
+      doc.text('GHS 500 – 1,500/month  |  $100 – $300/month', margin + 3, yPosition);
+      yPosition += 6;
+      doc.text('Includes: Updates, Backups, Security monitoring, Minor changes', margin + 3, yPosition);
+      yPosition += 12;
+
+      // Terms & Conditions
+      doc.setFontSize(11);
+      doc.setFont(undefined, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text('Terms & Conditions', margin, yPosition);
+      yPosition += 7;
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(60, 60, 60);
+      const terms = [
+        '• 60–70% upfront payment required before project commencement',
+        '• Remaining balance due before final deployment',
+        '• Domain and hosting are paid by the client',
+        '• Project timeline depends on timely content delivery from client',
+        '• Additional features outside agreed scope require a separate quote'
+      ];
+      terms.forEach(term => {
+        const termLines = doc.splitTextToSize(term, maxWidth);
+        doc.text(termLines, margin, yPosition);
+        yPosition += termLines.length * 4.5 + 2;
+      });
+
+      // Footer on last page
+      doc.setFontSize(8);
+      doc.setFont(undefined, 'normal');
+      doc.setTextColor(150, 150, 150);
+      doc.text('codecom.agency', pageWidth / 2, pageHeight - 10, { align: 'center' });
+
+      doc.save('CodeCom-Business-Growth-Guide.pdf');
+    }
+  </script>
+</body>
+
+</html>
